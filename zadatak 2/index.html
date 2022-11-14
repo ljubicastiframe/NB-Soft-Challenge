@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="form" action="#" onsubmit="return validation()">
+        <div>
+            <label for="firstName">First Name:</label>
+            <input id="firstName" name="firstName" type="text">
+            <span id="firstName1" style="color: red;"></span>
+        </div>
+        <br>
+        <div>
+            <label for="secondName">Second Name:</label>
+            <input id="secondName" name="secondName" type="text">
+            <span id="secondName1" style="color: red;"></span>
+        </div>
+        <br>
+        <div>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">other</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="birthday">Birthday:</label>
+            <input id="date" type="date" min="1980-01-01" max="2004-01-01" id="birthday" name="birthday" required>
+        </div>
+        <br>
+        <div>
+            <label for="address">Address:</label>
+            <textarea id="address" name="city" rows="4" cols="50"></textarea>
+            <span id="address1" style="color: red;"></span>
+        </div>
+        <br>
+        <div>
+            <label for="city">City:</label>
+            <br>
+            <input type="checkbox" id="grad1" name="grad1" value="Beograd">
+            <label for="grad1">Beograd</label><br>
+            <input type="checkbox" id="grad2" name="grad2" value="Novi Sad">
+            <label for="grad2">Novi Sad</label><br>
+            <input type="checkbox" id="grad3" name="grad3" value="Zrenjanin">
+            <label for="grad3">Zrenjanin</label><br><br>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function validation(){
+            var firstName = document.getElementById('firstName').value;
+            var secondName = document.getElementById('secondName').value;
+            var address = document.getElementById('address').value;
+
+            if(firstName == ""){
+                document.getElementById('firstName1').innerHTML =" Please fill the first name field";
+                return false;
+            }
+            if((firstName.length <= 2) || (firstName.length > 20)) {
+                document.getElementById('firstName1').innerHTML =" Length must be between 2 and 20";
+                return false;
+            }
+            // if(!isNaN(firstName)){
+            //     document.getElementById('firstName1'),innerHTML =" Only Characters are allowed";
+            // }
+
+
+            if(secondName == ""){
+                document.getElementById('secondName1').innerHTML =" Please fill the sedond name field";
+                return false;
+            }
+            if((secondName.length <= 2) || (firstName.length > 20)) {
+                document.getElementById('secondName1').innerHTML =" Length must be between 2 and 20";
+                return false;
+            }
+            // if(!isNaN(secondName)){
+            //     document.getElementById('secondName1'),innerHTML =" Only Characters are allowed";
+            // }
+
+
+            if(address == ""){
+                document.getElementById('address1').innerHTML =" Please fill the address field";
+                return false;
+            }
+            if((address.length <= 2) || (firstName.length > 20)) {
+                document.getElementById('address1').innerHTML =" Length must be between 2 and 20";
+                return false;
+            }
+            // if(!isNaN(address)){
+            //     document.getElementById('address1'),innerHTML =" Only Characters are allowed";
+            // }
+        }
+    </script>
+</body>
+</html>

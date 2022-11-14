@@ -1,0 +1,195 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="slick.min.js"></script>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+            font-family: 'Open+Sans', sans-serif;
+        }
+
+        .container{
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .slide_inner{
+            min-height: 100vh;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgb(0 0 0 / 40%);
+        }
+
+        .slide_holder .slide_inner{
+            background: url(images/slika1.jpg) center/cover
+            no-repeat;
+        }
+        .slide_holder:nth-child(2) .slide_inner{
+            background: url(images/slika2.jpg) center/cover
+            no-repeat;
+        }
+        .slide_holder:nth-child(3) .slide_inner{
+            background: url(images/slika3.jpg) center/cover
+            no-repeat;
+        }
+        .slide_holder:nth-child(4) .slide_inner{
+            background: url(images/slika4.jpg) center/cover
+            no-repeat;
+        }
+        .slide_holder:nth-child(5) .slide_inner{
+            background: url(images/slika5.jpg) center/cover
+            no-repeat;
+        }
+        .slide_holder:nth-child(6) .slide_inner{
+            background: url(images/slika6.jpg) center/cover
+            no-repeat;
+        }
+        .slide_holder:nth-child(7) .slide_inner{
+            background: url(images/slika7.jpg) center/cover 
+            no-repeat;
+        }
+        .slide_holder:nth-child(8) .slide_inner{
+            background: url(images/slika8.jpg) center/cover
+            no-repeat;
+        }
+        .slide_holder{
+            padding: 15px;
+        }
+        .slide_holder:focus{
+            outline: none;
+        }
+        .slide_content{
+            max-width: 700px;
+            width: 100%;
+            background: rgb(255 255 255 / 70%);
+            padding: 30px;
+            position: absolute;
+            right: 0;
+            bottom: 10%;
+            border-radius: 5px 0 0 5px;
+        }
+
+        span.arrow{
+            display: block;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+            z-index: 1;
+            top: 45%;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+        .slider_wrapper:hover span.arrow{
+            opacity: .5;
+        }
+        .slider_wrapper:hover span.arrow:hover{
+            opacity: 1;
+        }
+        span.arrow.next{
+            right: -15;
+        }
+        span.arrow.prev{
+            left: -15;
+        }
+
+        .slider_wrapper{
+            position: relative;
+            padding: 0 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slider-wrapper">
+            <span class="arrow prev"></span>
+            <span class="arrow next"></span>
+            <div class="slider_inner">
+                <div class="slide_holder">
+                    <div class="slide_inner">
+                        <div class="slide_content">
+                            <p>Slika 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide_holder">
+                    <div class="slide_inner">
+                        <div class="slide_content">
+                            <p>Slika 2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide_holder">
+                    <div class="slide_inner">
+                        <div class="slide_content">
+                            <p>Slika 3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide_holder">
+                    <div class="slide_inner">
+                        <div class="slide_content">
+                            <p>Slika 4</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide_holder">
+                    <div class="slide_inner">
+                        <div class="slide_content">
+                            <p>Slika 5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide_holder">
+                    <div class="slide_inner">
+                        <div class="slide_content">
+                            <p>Slika 6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide_holder">
+                    <div class="slide_inner">
+                        <div class="slide_content">
+                            <p>Slika 7</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide_holder">
+                    <div class="slide_inner">
+                        <div class="slide_content">
+                            <p>Slika 8</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+        jQuery(document).ready(function(){
+            $('.slider_inner').slick({
+                infinite: true,
+                slidesToShow: 1,
+                arrows: true,
+                nextArrow: '.arrow.next',
+                prevArrow: '.arrow.prev',
+                fade: true
+            });
+        })
+    </script>
+</body>
+</html>
